@@ -18,7 +18,7 @@ struct SolutionScreen: View {
     var body: some View {
         List {
             Section {
-                List(panagrams, id: \.self) {panagram in
+                ForEach(panagrams, id: \.self) {panagram in
                     Text(panagram)
                 }
             } header: {
@@ -51,6 +51,9 @@ struct SolutionScreen: View {
         
         for word in allWords {
             let wordLetters = Set(word.lowercased())
+            if word == "wildcat" {
+                dump("here")
+            }
             if (wordLetters == goodLetters) {
                 panagrams.append(word)
             } else if (wordLetters.isSubset(of: goodLetters)) && (word.count >= 4) {
@@ -68,19 +71,23 @@ struct SolutionScreen: View {
     }
     
     func getWords() -> Array<String> {
-        if let filepath = Bundle.main.path(forResource: "englishDictionary.csv", ofType: nil) {
+        if let filepath = Bundle.main.path(forResource: "CompleteEnglishWords.txt", ofType: nil) {
             do {
                 let content = try String(contentsOfFile: filepath)
-                let parsedCSV: [String] = content.components(
-                    separatedBy: "\n"
-                ).map{ $0.components(separatedBy: ",")[0] }
-                return parsedCSV
+                let parsedTxt: [String] = content.components(
+                    separatedBy: "\r\n"
+                )
+                dump("WIN")
+                dump(parsedTxt[0].count)
+                return parsedTxt
             }
             catch {
+                dump("fail")
                 dump(error)
                 return []
             }
         }
+        dump("fail")
         return []
     }
 }
