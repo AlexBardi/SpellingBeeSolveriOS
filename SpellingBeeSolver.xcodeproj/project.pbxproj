@@ -14,6 +14,10 @@
 		BE3C467D29129A4300ED9CE1 /* SpellingBeeSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C467C29129A4300ED9CE1 /* SpellingBeeSolverTests.swift */; };
 		BE3C468729129A4300ED9CE1 /* SpellingBeeSolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C468629129A4300ED9CE1 /* SpellingBeeSolverUITests.swift */; };
 		BE3C468929129A4300ED9CE1 /* SpellingBeeSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3C468829129A4300ED9CE1 /* SpellingBeeSolverUITestsLaunchTests.swift */; };
+		BE46B1E729129B1800F8C834 /* LetterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE46B1E629129B1800F8C834 /* LetterForm.swift */; };
+		BE46B1E929129B3900F8C834 /* SolutionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE46B1E829129B3900F8C834 /* SolutionScreen.swift */; };
+		BE46B1ED2913553800F8C834 /* englishDictionary.csv in Resources */ = {isa = PBXBuildFile; fileRef = BE46B1EC2913553800F8C834 /* englishDictionary.csv */; };
+		BE46B1EF29135DFA00F8C834 /* CompleteEnglishWords.txt in Resources */ = {isa = PBXBuildFile; fileRef = BE46B1EE29135DFA00F8C834 /* CompleteEnglishWords.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		BE3C468229129A4300ED9CE1 /* SpellingBeeSolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpellingBeeSolverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3C468629129A4300ED9CE1 /* SpellingBeeSolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingBeeSolverUITests.swift; sourceTree = "<group>"; };
 		BE3C468829129A4300ED9CE1 /* SpellingBeeSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingBeeSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE46B1E629129B1800F8C834 /* LetterForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterForm.swift; sourceTree = "<group>"; };
+		BE46B1E829129B3900F8C834 /* SolutionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionScreen.swift; sourceTree = "<group>"; };
+		BE46B1EC2913553800F8C834 /* englishDictionary.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = englishDictionary.csv; sourceTree = "<group>"; };
+		BE46B1EE29135DFA00F8C834 /* CompleteEnglishWords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CompleteEnglishWords.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +103,12 @@
 		BE3C466929129A4200ED9CE1 /* SpellingBeeSolver */ = {
 			isa = PBXGroup;
 			children = (
+				BE46B1EE29135DFA00F8C834 /* CompleteEnglishWords.txt */,
+				BE46B1EC2913553800F8C834 /* englishDictionary.csv */,
 				BE3C466A29129A4200ED9CE1 /* SpellingBeeSolverApp.swift */,
 				BE3C466C29129A4200ED9CE1 /* ContentView.swift */,
+				BE46B1E629129B1800F8C834 /* LetterForm.swift */,
+				BE46B1E829129B3900F8C834 /* SolutionScreen.swift */,
 				BE3C466E29129A4300ED9CE1 /* Assets.xcassets */,
 				BE3C467029129A4300ED9CE1 /* SpellingBeeSolver.entitlements */,
 				BE3C467129129A4300ED9CE1 /* Preview Content */,
@@ -233,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE46B1EF29135DFA00F8C834 /* CompleteEnglishWords.txt in Resources */,
+				BE46B1ED2913553800F8C834 /* englishDictionary.csv in Resources */,
 				BE3C467329129A4300ED9CE1 /* Preview Assets.xcassets in Resources */,
 				BE3C466F29129A4300ED9CE1 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE46B1E929129B3900F8C834 /* SolutionScreen.swift in Sources */,
+				BE46B1E729129B1800F8C834 /* LetterForm.swift in Sources */,
 				BE3C466D29129A4200ED9CE1 /* ContentView.swift in Sources */,
 				BE3C466B29129A4200ED9CE1 /* SpellingBeeSolverApp.swift in Sources */,
 			);
