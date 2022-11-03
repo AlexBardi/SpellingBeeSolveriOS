@@ -46,7 +46,8 @@ struct SolutionScreen: View {
     }
     
     func findSolutions() {
-        let goodLetters = Set(otherLetters.lowercased()[...] + centerLetter.lowercased()[...])
+        let goodLetters = Set(otherLetters.lowercased().trimmingCharacters(in: .whitespaces)[...] + centerLetter.lowercased().trimmingCharacters(in: .whitespaces)[...])
+        let necessaryLetter = Set(centerLetter.lowercased().trimmingCharacters(in: .whitespaces)[...])
         let allWords = getWords()
         
         for word in allWords {
@@ -56,7 +57,7 @@ struct SolutionScreen: View {
             }
             if (wordLetters == goodLetters) {
                 panagrams.append(word)
-            } else if (wordLetters.isSubset(of: goodLetters)) && (word.count >= 4) {
+            } else if (wordLetters.isSubset(of: goodLetters)) && (word.count >= 4) && (necessaryLetter.isSubset(of: wordLetters)){
                 if solutions[word.count] != nil {
                     solutions[word.count]?.append(word)
                 } else {
